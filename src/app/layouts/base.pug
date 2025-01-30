@@ -1,0 +1,17 @@
+block variables
+
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title #{title}
+    link(rel="stylesheet" href="../index.scss")
+    script(src="../index.js" defer="defer")
+
+
+  body(class=`page page--${pageClass} ${hasContainer ? 'container' : ''}`)
+    main.page__content.grid
+      .grid__content
+        block content
+      .grid__sidebar
+        block sidebar

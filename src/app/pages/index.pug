@@ -1,0 +1,17 @@
+extends ../layouts/base
+
+block variables
+  - var title='Страницы';
+  - var pageClass='pages';
+  -
+    var pages = [
+      { name: 'Главная', link: '/main.html' },
+      { name: 'Категория', link: '/category.html' },
+    ]
+
+block content
+  ul
+    each page in pages
+      li
+        a(href=page.link)= page.name
+  

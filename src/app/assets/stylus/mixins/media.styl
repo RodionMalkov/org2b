@@ -1,0 +1,23 @@
+// Минимальная ширина
+// +max-w($tab + 1px)
+// 
+min-w(width)
+  media = 'screen and (min-width: %s) ' % width
+  @media media
+    {block}
+
+// Максимальная ширина
+// +max-w($tab)
+// 
+max-w(width)
+  media = 'screen and (max-width: %s) ' % width
+  @media media
+    {block}
+
+// От минимальной ширины до максимальной
+// +min-max-w(1px, $tab)
+// 
+min-max-w(minWidth, maxWidth)
+  media = '(min-width: %s) and (max-width: %s) ' % (minWidth maxWidth)
+  @media media
+    {block}
