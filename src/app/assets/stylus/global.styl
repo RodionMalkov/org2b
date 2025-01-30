@@ -1,0 +1,16 @@
+html
+  overflow-x hidden
+
+*,
+*::before,
+*::after
+  box-sizing border-box
+
+.page
+  overflow-x hidden
+  font-family $font-family
+  font-size vw(16)
+  margin-top vw(132)
+  +min-max-w(1px, $tab)
+    font-size vwm(16)
+    margin-top vwm(86)
