@@ -10,8 +10,7 @@ html(lang='ru')
 
 
   body(class=`page page--${pageClass} ${hasContainer ? 'container' : ''}`)
-    main.page__content.grid
-      .grid__content
-        block content
-      .grid__sidebar
-        block sidebar
+    include ../../public/images/svg/sprites/icon.svg
+    include ../components/header/header
+    main.page__content
+      block content

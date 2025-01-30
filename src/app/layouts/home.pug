@@ -9,6 +9,8 @@ html(lang='ru')
     script(src="../index.js" defer="defer")
 
 
-  body.page.page--home
+  body(class=`page page--${pageClass} ${hasContainer ? 'container' : ''}`)
+    include ../../public/images/svg/sprites/icon.svg
+    include ../components/header/header
     main.page__content
       block content
