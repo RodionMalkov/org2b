@@ -1,0 +1,67 @@
+.header
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height vw(77)
+  z-index 100
+  margin-top vw(26)
+  +min-max-w(1px, $tab)
+    margin-top 0
+
+  &__wrapper
+    display flex
+    align-items center
+    justify-content space-between
+    border-radius vw(10)
+    background-color $secondary
+    padding vw(14) vw(30)
+    +min-max-w(1px, $tab)
+      border-radius vwm(10)
+      padding vwm(11) vwm(23)
+
+  &__right
+    display flex
+    align-items center
+    gap vw(86)
+
+  &__nav
+    display flex
+    align-items center
+    gap vw(28)
+
+  &__menu
+    ul
+      display flex
+      align-items center
+      gap vw(31.5)
+      list-style none
+      padding 0
+      right 0
+      +min-max-w(1px, $tab)
+        display none
+      
+      a
+        display flex
+        text-decoration none
+        font-size vw(16)
+        color $main
+        transition color 0.3s ease-in-out
+
+        &:hover
+          color $accent
+          transition color 0.3s ease-in-out
+
+  &__actions
+    display flex
+    align-items center
+    gap vw(27)
+
+  &__actions-search
+
+    svg
+      width vw(18)
+      height vw(18)
+      cursor pointer
+      stroke $main
+      fill transparent

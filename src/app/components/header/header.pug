@@ -1,0 +1,36 @@
+mixin menuList(menuList)
+  .header__menu
+    ul
+      each item in menuList
+        li
+          a(href="javascript:void(0)")= item.title
+
+-
+  var menuList = [
+    {title: 'О портале'},
+    {title: 'Мероприятия'},
+    {title: 'Организации'},
+    {title: 'Услуги'},
+    {title: 'Предложения'},
+    {title: 'Контакты'},
+    {title: 'Платежи'},
+  ];
+
+.header
+  .container
+    .header__wrapper
+      .header__left
+      .header__right
+        .header__nav
+          button.btn.btn--accent(type='button')
+            .css-icon.css-icon--catalog
+              span
+            span Каталог
+          +menuList(menuList)
+        .header__actions
+          .header__actions-search
+            svg
+              use(href="#search" xlink:href="#search")
+          button.btn.btn--accent-alt(type='button')
+            span Войти
+      
