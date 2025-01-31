@@ -1,0 +1,47 @@
+.btn
+  display flex
+  align-items center
+  gap vw(10)
+  padding vw(15) vw(20)
+  border-radius vw(100)
+  border none
+  +min-max-w(1px, $tab)
+    gap vwm(10)
+
+  span
+    font-size vw(16)
+    color $white
+    +min-max-w(1px, $tab)
+      font-size vwm(14)
+
+  &--main
+    background-color $main
+    outline 1px solid $main
+    outline-offset -1px
+
+    span
+      color $white
+
+  &--main-alt
+    background-color transparent
+    outline 1px solid $main
+    outline-offset -1px
+
+    span
+      color $main
+  
+  &--accent
+    background-color $accent
+    outline 1px solid $accent
+    outline-offset -1px
+
+    span
+      color $white
+
+  &--accent-alt
+    background-color transparent
+    outline 1px solid $accent
+    outline-offset -1px
+
+    span
+      color $accent

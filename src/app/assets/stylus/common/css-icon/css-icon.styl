@@ -1,0 +1,34 @@
+.css-icon
+  display flex
+  align-items center
+
+  span
+    position relative
+    display flex
+
+  &--catalog
+    width vw(20)
+    height vw(10)
+
+    span
+      width vw(17)
+      height vw(1.3)
+      background-color $white
+
+      &:before
+        content ''
+        position absolute
+        top vw(-5)
+        left 0
+        width vw(20)
+        height vw(1.3)
+        background-color $white
+      
+      &:after
+        content ''
+        position absolute
+        top vw(5)
+        left 0
+        width vw(14)
+        height vw(1.3)
+        background-color $white
