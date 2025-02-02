@@ -8,6 +8,12 @@
       height auto
       border-radius vwm(10)
 
+    .btn
+      +min-w($tab + 1px)
+        display none
+      +min-max-w(1px, $tab)
+        margin-top vwm(30)
+
   &__payments-title
     display flex
     align-items center
@@ -16,7 +22,7 @@
     margin-bottom vw(22)
     +min-max-w(1px, $tab)
       gap vwm(10)
-      margin-bottom vwm(22)
+      margin-bottom vwm(14)
     
     &:hover
       span
@@ -54,18 +60,16 @@
       max-height vw(180)
     +min-max-w(1px, $tab)
       width 100%
+    
+    p
+      +min-max-w(1px, $tab)
+        font-size vwm(14)
 
     &.scroll-block 
       .simplebar-track.simplebar-vertical
         background-color $main
         .simplebar-scrollbar
             background-color #e4e9ef
-
-  .btn
-    +min-w($tab + 1px)
-      display none
-    +min-max-w(1px, $tab)
-      margin-top vwm(30)
   
   &__payments-icon
     position absolute

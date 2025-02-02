@@ -14,6 +14,21 @@ section.std-section.hero
             use(href="#arrow-more" xlink:href="#arrow-more")
       .hero__right
         .hero__right-block.hero__events
+          .hero__events-title Ближайшие мероприятия
+          .hero__events-swiper.swiper
+            .hero__events-wrapper.swiper-wrapper
+              each eventRepeater in [...Array(4)]
+                .hero__events-item.swiper-slide
+                  .hero__events-content.content.scroll-block
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  .hero__events-actions
+                    a.btn.btn--main(href="javascript:void(0);" data-modal="event")
+                      span Подробнее
+                      svg
+                        use(href="#arrow-more" xlink:href="#arrow-more")
+            +Arrows()
+            +Pagination()
+
 
         .hero__right-block.hero__payments
           a.hero__payments-title(href="javascript:void(0);")

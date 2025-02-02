@@ -6,4 +6,76 @@
     background-color $secondary
     +min-max-w(1px, $tab)
       width 100%
+      height 100%
       border-radius vwm(10)
+
+    .btn
+      width max-content
+
+  &__events-title
+    font-weight 600
+    font-size vw(32)
+    color $main
+    transition color .3s ease-in-out
+    margin-bottom vw(22)
+    +min-max-w(1px, $tab)
+      margin-bottom vwm(14)
+      font-size vwm(20)
+
+  &__events-swiper.swiper
+    width 100%
+    height 100%
+
+    .pagination
+      +min-w($tab + 1px)
+        display none
+      +min-max-w(1px, $tab)
+        width fit-content
+        position absolute
+        left unset
+        right 0
+        bottom vwm(20)
+
+    .control-arrow
+      position absolute
+      justify-content space-between
+      width 100%
+      top 'calc(50% - %s)' % vw(60)
+      transform translateY(-50%)
+      z-index 1
+      +min-max-w(1px, $tab)
+        display none
+        top 'calc(50% - %s)' % vwm(60)
+
+  &__events-wrapper.swiper-wrapper
+    width 100%
+    height vw(340)
+    +min-max-w(1px, $tab)
+      height auto
+
+  &__events-item.swiper-slide
+    display flex
+    flex-direction column
+    justify-content space-between
+  
+  &__events-content.content
+    +min-w($tab + 1px)
+      max-height vw(250)
+
+    p
+      +min-max-w(1px, $tab)
+        font-size vwm(14)
+
+    &.scroll-block 
+      .simplebar-track.simplebar-vertical
+        right 0
+
+  &__events-actions
+    display flex
+    align-items center
+    gap vw(20)
+    justify-content flex-end
+    +min-max-w(1px, $tab)
+      gap vwm(20)
+      justify-content flex-start
+      margin-top vwm(60)
