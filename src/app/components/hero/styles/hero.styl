@@ -1,0 +1,14 @@
+.hero
+  &__wrapper
+    display flex
+    align-items stretch
+    justify-content space-between
+    gap vw(30)
+    +min-max-w(1px, $tab)
+      flex-direction column
+      gap vwm(30)
+
+@import 'hero.left.styl'
+@import 'hero.right.styl'
+@import 'hero.events.styl'
+@import 'hero.payments.styl'

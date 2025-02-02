@@ -1,0 +1,78 @@
+.hero
+  &__left
+    display flex
+    position relative
+    width vw(945)
+    padding vw(40)
+    +min-max-w(1px, $tab)
+      flex-direction column
+      gap vwm(14)
+      width 100%
+      height vwm(442)
+      padding vwm(20)
+
+  &__left-img
+    position absolute
+    inset 0
+    z-index -1
+    width 100%
+    height 100%
+    border-radius vw(10)
+    overflow hidden
+    +min-max-w(1px, $tab)
+      border-radius vwm(10)
+
+    &:before
+      content ''
+      position absolute
+      inset 0
+      background linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%)
+      z-index 1
+
+    img
+      width 100%
+      height 100%
+      object-fit cover
+
+  &__left-title
+    font-weight 700
+    font-size vw(64)
+    color $white
+    margin 0
+    +min-max-w(1px, $tab)
+      font-size vwm(48)
+
+  &__left-info
+    display flex
+    flex-direction column
+    gap vw(20)
+    margin-top auto
+    width vw(542)
+    +min-max-w(1px, $tab)
+      width 100%
+      gap vwm(20)
+
+  &__left-desc.content
+    position relative
+    color $white
+    margin-left vw(10)
+    +min-w($tab + 1px)
+      max-height vw(220)
+    +min-max-w(1px, $tab)
+      display none
+      margin 0
+
+    &:before
+      content ''
+      position absolute
+      top 0
+      left vw(-14)
+      width vw(4)
+      height 100%
+      background-color $white
+
+  &__left-btn.btn
+    +min-w($tab + 1px)
+      position absolute
+      right vw(40)
+      bottom vw(40)
