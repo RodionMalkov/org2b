@@ -1,7 +1,9 @@
 import '../stylus/style.styl'
 
-import './libraries/micromodal.js'
-import './libraries/funcybox.js'
-import './libraries/swiper.js'
+import './lib/micromodal.js'
+import './lib/funcybox.js'
+import './lib/swiper.js'
+import './lib/lazyload.js'
+import './lib/simplebar.js'
 
 import '../../components/index.js'

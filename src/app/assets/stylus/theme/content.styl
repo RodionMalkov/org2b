@@ -1,0 +1,15 @@
+.content
+  color $main
+    
+  p
+    font-weight 400
+    font-size vw(16)
+    line-height 150%
+    margin 0
+    +min-max-w(1px, $tab)
+      font-size vwm(16)
+
+    &:not(:last-child)
+      margin-bottom vw(10)
+      +min-max-w(1px, $tab)
+        margin-bottom vwm(10)

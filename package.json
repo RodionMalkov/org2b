@@ -59,6 +59,8 @@
     "masonry-layout": "^4.2.2",
     "micromodal": "^0.4.10",
     "normalize.css": "^8.0.1",
-    "swiper": "^11.1.14"
+    "simplebar": "^6.3.0",
+    "swiper": "^11.1.14",
+    "vanilla-lazyload": "^19.1.3"
   }
 }

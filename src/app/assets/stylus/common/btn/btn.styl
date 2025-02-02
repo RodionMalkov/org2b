@@ -5,14 +5,25 @@
   padding vw(15) vw(20)
   border-radius vw(100)
   border none
+  cursor pointer
+  text-decoration none
   +min-max-w(1px, $tab)
     gap vwm(10)
+    padding vwm(14) vwm(25)
+    width max-content
 
   span
     font-size vw(16)
     color $white
     +min-max-w(1px, $tab)
       font-size vwm(14)
+
+  svg
+    width vw(15)
+    height vw(15)
+    +min-max-w(1px, $tab)
+      width vwm(15)
+      height vwm(15)
 
   &--main
     background-color $main
@@ -45,3 +56,11 @@
 
     span
       color $accent
+
+  &--white
+    background-color $white
+    outline 1px solid $white
+    outline-offset -1px
+
+    span
+      color $main
