@@ -1,0 +1,45 @@
+.control-arrow
+  display flex
+  gap vw(10)
+  +min-max-w(1px, $tab)
+    bottom vwm(68)
+    left vwm(30)
+    gap vwm(10)
+
+.arrow-prev, .arrow-next
+  display flex
+  justify-content center
+  align-items center
+  border-radius vw(10)
+  cursor pointer
+  transition background-color .3s ease-in-out
+  outline 1px solid $border-color
+  outline-offset -1px
+  transition outline-color .3s ease-in-out
+  +min-max-w(1px, $tab)
+    border-radius vwm(10)
+
+  &:hover
+    outline-color $text-color
+    transition outline-color .3s ease-in-out
+
+  svg
+    width vw(18)
+    height vw(18)
+    object-fit contain
+    fill $text-color
+    transition fill .3s ease-in-out
+    +min-max-w(1px, $tab)
+      width vwm(18)
+      height vwm(18)
+
+  &.swiper-button-disabled
+    svg
+      fill $gray
+      transition fill .3s ease-in-out
+  
+// .arrow-next
+//   transform rotate(-90deg)
+
+.arrow-prev
+  transform rotate(180deg)

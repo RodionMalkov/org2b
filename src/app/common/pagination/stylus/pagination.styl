@@ -1,0 +1,54 @@
+// Булеты -- bullets
+.pagination.swiper-pagination-bullets.swiper-pagination-horizontal
+  display flex
+  align-items center
+  gap vw(20)
+  +min-max-w(1px, $tab)
+    gap vwm(10)
+
+  .swiper-pagination-bullet
+    width vw(6)
+    height vw(6)
+    border-radius 50%
+    background-color $border-color
+    opacity .2
+    margin 0
+    +min-max-w(1px, $tab)
+      width vwm(6)
+      height vwm(6)
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active
+    background-color $main
+    opacity 1
+
+// Цифры / дробь -- fraction
+.fraction.swiper-pagination-fraction
+  width max-content
+  bottom vw(28)
+  font-family $main-font
+  font-weight 400
+  font-size vw(16)
+  color $white
+
+  // Доп. стили к элементам пагинации
+  // .swiper-pagination-current
+  // .swiper-pagination-separator
+  // .swiper-pagination-total
+
+// Прогресс бар  -- scrollbar/progressbar
+.pagination.swiper-pagination-progressbar,
+.pagination.swiper-scrollbar-horizontal,
+.scrollbar.swiper-scrollbar-horizontal
+  position relative
+  inset unset
+  width 100%
+  height vw(3)
+  background-color $border-color
+  +min-max-w(1px, $tab)
+    height vwm(3)
+
+  .swiper-pagination-progressbar-fill,
+  .swiper-scrollbar-drag
+    height 100%
+    background-color $text-color
+

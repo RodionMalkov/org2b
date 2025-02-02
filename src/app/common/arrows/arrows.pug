@@ -1,0 +1,20 @@
+mixin Arrows(container = true, elements = '')
+  if container
+    .control-arrow
+      if elements === '' || elements === 'prev'
+        .arrow-prev
+          svg
+            use(href='#arrow-more' xlink:href='#arrow-more')
+      if elements === '' || elements === 'next'
+        .arrow-next
+          svg
+            use(href='#arrow-more' xlink:href='#arrow-more')
+  else
+    if elements === '' || elements === 'prev'
+      .arrow-prev
+        svg
+          use(href='#arrow-more' xlink:href='#arrow-more')
+    if elements === '' || elements === 'next'
+      .arrow-next
+        svg
+          use(href='#arrow-more' xlink:href='#arrow-more')

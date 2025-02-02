@@ -1,0 +1,7 @@
+mixin Pagination(type = '')
+  if type === '' || type === 'bullets'
+    .pagination
+  else if type === 'fraction'
+    .fraction
+  else
+    .scrollbar
