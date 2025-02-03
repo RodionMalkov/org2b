@@ -1,0 +1,9 @@
+mixin SectionHeader(title, btnText= 'Подробнее', actions = true)
+  .section-header
+    h2.section-header__title= title
+    if actions
+      .section-header__actions
+        a.btn.btn--main-alt(href="javascript:void(0);")
+          span= btnText
+          svg
+            use(href="#arrow-more" xlink:href="#arrow-more")

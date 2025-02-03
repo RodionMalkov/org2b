@@ -1,0 +1,17 @@
+include ../card-company/card-company.pug
+
+-
+  var cardOrgs = [
+    { logo: '1.png', title: 'Союз журналистов' },
+    { logo: '2.png', title: 'Волонтеры победы' },
+    { logo: '3.png', title: 'Ассоциация профессиональных консультантов' },
+    { logo: '1.png', title: 'Союз журналистов' },
+  ];
+
+.std-section.org-grid
+  .container
+    .org-grid__wrapper
+      +SectionHeader('Общественные организации')
+      .org-grid__list
+        each card in cardOrgs
+          +CardCompany(card.logo, card.title)
