@@ -1,5 +1,5 @@
 mixin CardEvent(photo = '1.png', title = 'Организация')
-  .card-event
+  a.card-event(href="javascript:void(0);")
     .card-event__photo
       img(data-src=`./assets/images/card-event/${photo}` src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
     .card-event__title= title
