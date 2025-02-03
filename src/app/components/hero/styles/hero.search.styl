@@ -1,0 +1,25 @@
+.hero
+  &__search
+    width 100%
+    background-color $main
+    border-radius vw(10)
+    padding vw(24) vw(32)
+    +min-max-w(1px, $tab)
+      background-color transparent
+      border-radius 0
+      padding 0
+
+    .search-row
+      +min-max-w(1px, $tab)
+        display none
+
+  &__search--mobile
+    +min-w($tab + 1px)
+      display none
+    +min-max-w(1px, $tab)
+      width 100%
+      justify-content center
+      padding vwm(17)
+      svg
+        fill transparent
+        stroke $white

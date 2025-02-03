@@ -1,3 +1,5 @@
+include ../search-row/search-row.pug
+
 section.std-section.hero
   .container
     .hero__wrapper
@@ -44,3 +46,9 @@ section.std-section.hero
               use(href="#arrow-more" xlink:href="#arrow-more")
           .hero__payments-icon
             img(data-src="/assets/images/svg/icon/payment-icon.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
+      .hero__search
+        +SearchRow(true)
+        button.btn.btn--main.hero__search--mobile(type='button')
+          svg
+            use(href="#search" xlink:href="#search")
+          span Поиск по порталу
