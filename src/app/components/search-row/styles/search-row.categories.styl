@@ -1,0 +1,87 @@
+.search-row
+  &__categories
+    position relative
+    display flex
+    align-items center
+    flex 0 0 auto
+    gap vw(10)
+    background-color $white
+    width fit-content
+    min-width vw(150)
+    margin-left vw(-1)
+    padding 0 vw(19)
+    cursor pointer
+    +min-max-w(1px, $tab)
+      gap vwm(10)
+      margin-left vwm(-1)
+
+    &:before
+      content ''
+      position absolute
+      top 50%
+      left 0
+      transform translateY(-50%)
+      background-color $main
+      width vw(1)
+      height vw(38)
+
+    span
+      font-weight 400
+      font-size vw(16)
+      line-height 144%
+      color $main
+
+    svg
+      width vw(11)
+      height vw(11)
+      fill $main
+      transform rotate(90deg)
+      transition transform .3s ease-in-out
+
+    &:hover
+      svg
+        transform rotate(-90deg)
+        transition transform .3s ease-in-out
+
+      .search-row__categories-choose
+        opacity 1
+        pointer-events all
+        transition opacity .3s ease-in-out
+
+  &__categories-choose
+    position absolute
+    top 100%
+    left vw(-2)
+    padding-top vw(10)
+    opacity 0
+    pointer-events none
+    transition opacity .3s ease-in-out
+
+  &__categories-list
+    padding vw(20) vw(15)
+    border-radius vw(10)
+    width vw(225)
+    background-color $white
+    box-shadow: 0 0 vw(3) 0 rgba(0, 0, 0, 0.35);
+
+    ul
+      padding 0 
+      margin 0
+      list-style none
+
+      li
+        padding vw(10) 0
+        transition color .3s ease-in-out
+
+        &:first-child
+          padding-top 0
+
+        &:last-child
+          padding-bottom 0
+
+        &:hover
+          color $accent
+          transition color .3s ease-in-out
+
+        &.active
+          font-weight 600

@@ -1,0 +1,25 @@
+mixin SearchRow(additionalBlock)
+  .search-row
+    form.search-row__form
+      .search-row__label
+        .search-row__input
+          input.form__input(type='text' placeholder='Поиск по порталу...')
+        if additionalBlock
+          .search-row__categories
+            span Все категории
+            svg
+              use(href="#arrow-more" xlink:href="#arrow-more")
+            .search-row__categories-choose
+              .search-row__categories-list
+                ul
+                  li Все категории
+                  li По всему сайту
+                  li Каталог предложений
+                  li Каталог спроса
+                  li Организации
+                  li Мероприятия
+
+        button.btn.btn--accent(type='submit')
+          svg
+            use(href="#search" xlink:href="#search")
+          span Найти

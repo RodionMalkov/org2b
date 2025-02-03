@@ -1,0 +1,30 @@
+.search-row
+
+  &__form
+    margin 0
+    
+  &__label
+    display flex
+    align-items stretch
+
+    .form__input
+      border-radius vw(100) 0 0 vw(100)
+      border-color $white
+      +min-max-w(1px, $tab)
+        border-radius vwm(100) 0 0 vwm(100) 
+    
+    .btn
+      border-radius 0 vw(100) vw(100) 0
+      margin-left vw(-1)
+      +min-max-w(1px, $tab)
+        border-radius 0 vwm(100) vwm(100) 0
+        margin-left vwm(-1)
+
+      svg
+        fill transparent
+        stroke $white
+
+  &__input
+    width 100%
+
+@import './search-row.categories.styl';
