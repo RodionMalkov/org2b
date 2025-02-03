@@ -1,0 +1,42 @@
+.card-company
+  display flex
+  align-items center
+  flex-direction column
+  gap vw(20)
+  +min-max-w(1px, $tab)
+    gap vwm(14)
+
+  &__logo
+    position relative
+    width 100%
+    height vw(140)
+    border-radius vw(10)
+    background-color $secondary
+    +min-max-w(1px, $tab)
+      height vwm(114)
+      border-radius vwm(10)
+
+    img
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      width auto
+      max-height vw(100)
+      object-fit contain
+      +min-max-w(1px, $tab)
+        max-height vwm(80)
+  
+  &__title
+    font-weight 600
+    font-size vw(20)
+    text-align center
+    color $main
+    padding 0 vw(40)
+    overflow hidden
+    display -webkit-box
+    -webkit-box-orient vertical
+    -webkit-line-clamp 3
+    +min-max-w(1px, $tab)
+      font-size vwm(18)
+      padding 0 vwm(20)
