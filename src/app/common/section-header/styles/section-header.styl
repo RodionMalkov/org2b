@@ -3,6 +3,9 @@
   align-items center
   justify-content space-between
   gap vw(20)
+  margin-bottom vw(22)
+  +min-max-w(1px, $tab)
+    margin-bottom vwm(22)
 
   &__title
     font-weight 600
@@ -10,4 +13,26 @@
     color $main
     +min-max-w(1px, $tab)
       font-size vwm(24)
-  
+
+  &__actions
+    .btn
+      padding vw(16) vw(20)
+      +min-max-w(1px, $tab)
+        width vwm(45)
+        height vwm(45)
+        padding vwm(12) vwm(16)
+        border-radius 50%
+        
+      span
+        +min-max-w(1px, $tab)
+          display none
+
+      svg
+        &:nth-child(2)
+          +min-max-w(1px, $tab)
+            display none
+            
+        &:last-child
+          display none
+          +min-max-w(1px, $tab)
+            display flex
