@@ -1,0 +1,67 @@
+.card-event
+  &__photo
+    width 100%
+    height vw(241)
+    border-radius vw(10)
+    overflow hidden
+    margin-bottom vw(16)
+    +min-max-w(1px, $tab)
+      height vwm(240)
+      border-radius vwm(10)
+      margin-bottom vwm(14)
+
+    img
+      width 100%
+      height 100%
+      object-fit cover
+
+  &__title
+    font-weight 600
+    font-size vw(24)
+    color $main
+    margin-bottom vw(19)
+    +min-max-w(1px, $tab)
+      font-size vwm(20)
+      margin-bottom vwm(18)
+
+  &__desc
+    font-size vw(16)
+    line-height 150%
+    color $gray
+    overflow hidden
+    display -webkit-box
+    -webkit-box-orient vertical
+    -webkit-line-clamp 2
+    margin-bottom vw(16)
+    +min-max-w(1px, $tab)
+      font-size vwm(16)
+      -webkit-line-clamp 3
+      margin-bottom vwm(16)
+
+  &__info
+    display flex
+    flex-direction column
+    gap vw(16)
+    +min-max-w(1px, $tab)
+      gap vwm(14)
+
+  &__info-item
+    display flex
+
+    &.time
+      .card-event__info-item-value
+        display flex
+        flex-direction column
+        gap vw(14)
+        +min-max-w(1px, $tab)
+          gap vwm(14)
+
+    svg
+      width vw(20)
+      height vw(20)
+      fill $main
+      margin-right vw(10)
+      +min-max-w(1px, $tab)
+        width vwm(20)
+        height vwm(20)
+        margin-right vwm(10)

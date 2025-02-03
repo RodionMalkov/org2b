@@ -1,0 +1,20 @@
+include ../card-event/card-event.pug
+
+-
+  var cardEvents = [
+    { photo: '1.png', title: 'Встреча любительского читального клуба' },
+    { photo: '2.png', title: 'Выставка Культурно-просветительского центра' },
+    { photo: '1.png', title: 'Всероссийская научная конференция' },
+    { photo: '2.png', title: 'Встреча любительского читального клуба' },
+  ];
+
+.std-section.event-grid
+  .container
+    .event-grid__wrapper
+      +SectionHeader('Ближайшие мероприятия')
+      .event-grid__list
+        each card in cardEvents
+          +CardEvent(card.photo, card.title)
+      .event-grid__actions
+        button.btn.btn--main(type='button')
+          span Показать еще
