@@ -15,3 +15,6 @@ include ../card-company/card-company.pug
       .org-grid__list
         each card in cardOrgs
           +CardCompany(card.logo, card.title)
+      .org-grid__actions
+        button.btn.btn--main(type='button')
+          span Показать еще

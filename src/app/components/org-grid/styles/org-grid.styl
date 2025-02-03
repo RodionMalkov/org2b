@@ -1,0 +1,22 @@
+.org-grid
+  &__list
+    display grid
+    grid-template-columns repeat(4, 1fr)
+    grid-gap vw(30)
+    +min-max-w(1px, $tab)
+      grid-gap vwm(30)
+      grid-template-columns repeat(1, 1fr)
+
+  &__actions
+    display flex
+    align-items center
+    justify-content center
+    margin-top vw(44)
+    +min-max-w(1px, $tab)
+      margin-top vwm(30)
+
+    .btn
+      min-width vw(212)
+      justify-content center
+      +min-max-w(1px, $tab)
+        min-width vwm(212)
