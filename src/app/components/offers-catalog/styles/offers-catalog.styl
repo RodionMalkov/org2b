@@ -1,0 +1,29 @@
+.offers-catalog
+  &__wrapper
+    display grid
+    grid-template-columns vw(526) 1fr
+    grid-gap vw(56)
+    +min-max-w(1px, $tab)
+      grid-template-columns 1fr
+      grid-gap vwm(40)
+
+  &__block-header
+    margin-bottom vw(40)
+    +min-max-w(1px, $tab)
+      margin-bottom vwm(20)
+
+    h2, h3, h4
+      font-weight 600
+      font-size vw(32)
+      color $main
+      margin 0
+      +min-max-w(1px, $tab)
+        font-size vwm(24)
+
+  &__grid
+    display grid
+    grid-template-columns repeat(3, 1fr)
+    grid-gap vw(40) vw(30)
+    +min-max-w(1px, $tab)
+      grid-template-columns repeat(2, 1fr)
+      grid-gap vwm(20)

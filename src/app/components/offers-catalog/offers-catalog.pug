@@ -1,0 +1,16 @@
+include ../card-simple/card-simple.pug
+
+section.std-section.offers-catalog
+  .container
+    .offers-catalog__wrapper
+      .offers-catalog__block
+        .offers-catalog__block-header
+          h3 Текстовые предложения
+        include ../text-offers/text-offers.pug
+      .offers-catalog__block
+        .offers-catalog__block-header
+          h3 Каталог
+        
+        .offers-catalog__grid
+          each catalogRepeater in [...Array(9)]
+            +CardSimple()
