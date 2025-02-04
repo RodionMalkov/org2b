@@ -1,0 +1,8 @@
+mixin CardSimple(photo = '1.png', title = 'Заголовок карточки')
+  a.card-simple(href="javascript:void(0);")
+    .card-simple__photo
+      img(data-src=`./assets/images/card-simple/${photo}` src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
+    .card-simple__title
+      span= title
+      svg
+        use(href='#arrow-more' xlink:href='#arrow-more')
