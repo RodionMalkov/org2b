@@ -10,6 +10,10 @@
         transform scale(1.05)
         transition transform 0.5s ease-in-out
 
+    .card-event__title
+      color $accent
+      transition color 0.3s ease-in-out
+
   &__photo
     position relative
     width 100%
@@ -48,6 +52,7 @@
     font-size vw(24)
     color $main
     margin-bottom vw(19)
+    transition color 0.3s ease-in-out
     +min-max-w(1px, $tab)
       font-size vwm(20)
       margin-bottom vwm(18)
