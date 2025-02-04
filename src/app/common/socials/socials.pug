@@ -1,0 +1,7 @@
+mixin Socials(items, alt)
+  ul.socials(class= alt ? 'socials--alt' : '')
+    each item in items
+      li
+        a(href="javascript:void(0);")
+          svg
+            use(href=`/assets/images/svg/sprites/social.svg#${item}` xlink:href=`/assets/images/svg/sprites/social.svg#${item}`)
