@@ -1,0 +1,17 @@
+mixin TextOffersItem()
+  a.text-offers__item(href="javascript:void(0);")
+    .text-offers__item-icon
+      img(data-src=`./assets/images/icon/offers-icon.png` src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
+    .text-offers__item-info
+      .text-offers__item-title Заказать мебель - от фабрики производителя Lorem ipsum dolor
+      .text-offers__item-breadcrumbs
+        span sitefurniture.ru
+        span Фабрика по производству уникальной Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      .text-offers__item-desc.content
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic distinctio neque suscipit quo incidunt, officia laudantium praesentium omnis optio id ipsam dolore ex adipisci quisquam, consequatur natus, tempora non amet?
+
+.text-offers
+  .text-offers__wrapper.scroll-block
+    .text-offers__list
+      each textOffersRepeater in [...Array(6)]
+        +TextOffersItem()

@@ -1,0 +1,91 @@
+.text-offers
+  &__wrapper
+    +min-w($tab + 1px)
+      max-height vw(765)
+
+  &__list
+    display flex
+    flex-direction column
+    gap vw(16)
+    +min-max-w(1px, $tab)
+      gap vwm(16)
+
+  &__item-title,
+  &__item-breadcrumbs,
+  &__item-desc.content
+    overflow hidden
+    display -webkit-box
+    -webkit-box-orient vertical
+
+  &__item
+    display flex
+    gap vw(14)
+    +min-max-w(1px, $tab)
+      gap vwm(8)
+
+  &__item-icon
+    width vw(30)
+    height vw(30)
+    flex 0 0 auto
+    +min-max-w(1px, $tab)
+      width vwm(30)
+      height vwm(30)
+
+    img
+      width 100%
+      height 100%
+      object-fit contain
+
+  &__item-info
+    display flex
+    flex-direction column
+    gap vw(10)
+    padding-right vw(20)
+    +min-max-w(1px, $tab)
+      gap vwm(10)
+      padding-right 0
+
+  &__item-title
+    font-weight 600
+    font-size vw(20)
+    color $accent
+    -webkit-line-clamp 2
+    +min-max-w(1px, $tab)
+      font-size vwm(20)
+
+  &__item-breadcrumbs
+    -webkit-line-clamp 1
+
+    a, span
+      position relative
+      font-size vw(16)
+      color $main
+      +min-max-w(1px, $tab)
+        font-size vwm(16)
+
+      &:first-child
+        font-weight 700
+
+      &:not(:last-child)
+        margin-right vw(18)
+        +min-max-w(1px, $tab)
+          margin-right vwm(18)
+
+        &:after
+          content ''
+          position absolute
+          top 50%
+          transform translateY(-50%)
+          right vw(-14)
+          width vw(7)
+          height vw(11)
+          background-image url("data:image/svg+xml,%3Csvg width='7' height='11' viewBox='0 0 7 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.97967 5.82229L5.97968 5.82227C6.14011 5.66185 6.14011 5.39993 5.97968 5.23951L1.60491 0.864741C1.52262 0.782449 1.41767 0.743506 1.3117 0.743506C1.20682 0.743506 1.10025 0.784808 1.02032 0.864741C0.859895 1.02516 0.859895 1.28708 1.02032 1.4475L5.10371 5.53089L1.081 9.5536C0.920579 9.71402 0.920579 9.97594 1.081 10.1364C1.24142 10.2968 1.50334 10.2968 1.66376 10.1364L5.97967 5.82229Z' fill='%231F2650' stroke='%231F2650' stroke-width='0.2' /%3E%3C/svg%3E")
+          +min-max-w(1px, $tab)
+            right vwm(-14)
+            width vwm(7)
+            height vwm(11)
+
+  &__item-desc.content
+    -webkit-line-clamp 3
+    +min-max-w(1px, $tab)
+      -webkit-line-clamp 4
