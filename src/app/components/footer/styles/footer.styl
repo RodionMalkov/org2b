@@ -1,0 +1,155 @@
+.footer
+  background-color $main
+
+  &__main
+    display flex
+    justify-content space-between
+    padding vw(50) 0
+    +min-max-w(1px, $tab)
+      flex-direction column
+      padding vwm(50) 0 vwm(36)
+    
+  &__feedback
+    display flex
+    flex-direction column
+    gap vw(30)
+    width vw(534)
+    +min-max-w(1px, $tab)
+      width 100%
+      max-width 100%
+      gap vwm(32)
+      margin-bottom vwm(26)
+
+    .btn
+      width max-content
+      min-width vw(182)
+      justify-content center
+      +min-max-w(1px, $tab)
+        width 100%
+
+  &__feedback-title
+    font-weight 600
+    font-size vw(24)
+    line-height 140%
+    color $white
+    +min-max-w(1px, $tab)
+      font-size vwm(24)
+
+  &__nav
+    display flex
+    gap vw(60)
+    +min-max-w(1px, $tab)
+      gap vwm(18)
+      flex-direction column
+      margin-bottom vwm(40)
+    
+  &__nav-list
+    ul
+      padding 0
+      margin 0
+      list-style none
+      display flex
+      flex-direction column
+      gap vw(20)
+      +min-max-w(1px, $tab)
+        gap vwm(20)
+
+      a
+        display flex
+        color $white
+        font-weight 400
+        font-size vw(20)
+        line-height 140%
+        color $white
+        +min-max-w(1px, $tab)
+          font-size vwm(18)
+
+        &:hover
+          color $accent
+          transition color .3s ease-in-out
+  
+  &__contacts
+    display flex
+    flex-direction column
+    gap vw(16)
+    +min-max-w(1px, $tab)
+      gap vwm(18)
+  
+  &__contacts-title
+    font-weight 400
+    font-size vw(20)
+    line-height 140%
+    color $white
+    +min-max-w(1px, $tab)
+      font-size vwm(20)
+  
+  &__contacts-item
+    font-weight 400
+    font-size vw(16)
+    line-height 150%
+    letter-spacing 0.01em
+    color $white
+    +min-max-w(1px, $tab)
+      font-size vwm(16)
+
+    a
+      color $white
+      transition color .3s ease-in-out
+      &:hover
+        color $accent
+        transition color .3s ease-in-out
+
+  &__bottom
+    display flex
+    justify-content space-between
+    align-items center
+    padding vw(30) 0
+    border-top 1px solid $white
+    +min-max-w(1px, $tab)
+      flex-direction column
+      padding vwm(30) 0
+      align-items flex-start
+      gap vwm(14)
+  
+  &__bottom-partners
+    width vw(534)
+    display flex
+    flex-wrap wrap
+    align-items center
+    gap vw(10)
+    +min-max-w(1px, $tab)
+      width 100%
+      gap vwm(10)
+
+    a
+      display flex
+      width auto
+      height vw(52)
+      +min-max-w(1px, $tab)
+        height vwm(50)
+
+      img
+        width 100%
+        height 100%
+        object-fit contain
+
+  &__bottom-block
+    
+    &:nth-child(2)
+      +min-w($tab + 1px)
+        width vw(328)
+
+    &:last-child
+      +min-w($tab + 1px)
+        width vw(340)
+
+    &, a
+      font-weight 400
+      font-size 14px
+      line-height 140%
+      color $white
+
+    a
+      &:hover
+        color $accent
+        transition color .3s ease-in-out

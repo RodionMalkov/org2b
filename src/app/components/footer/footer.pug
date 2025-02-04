@@ -1,0 +1,46 @@
+mixin footerList(list)
+  .footer__nav-list
+    ul
+      each item in list
+        li
+          a(href="javascript:void(0);")= item
+
+
+.footer
+  .container
+    .footer__wrapper
+      .footer__main
+
+        .footer__feedback
+          .footer__feedback-title
+            | Есть идея или предложение?
+            br
+            | Напишите нам и мы с вами свяжемся!
+          .btn.btn--accent
+            span Написать нам
+          +Socials(['tg', 'vk', 'wa'])
+
+        .footer__nav
+          +footerList(['О портале', 'Мероприятия', 'Организации'])
+          +footerList(['Услуги', 'Предложения', 'Платежи'])
+
+        .footer__contacts
+          .footer__contacts-title Контакты
+          .footer__contacts-item Тел: 
+            a(href="javascript:void(0);") +7 (343) 351-74-73
+          .footer__contacts-item Почта: 
+            a(href="javascript:void(0);") pochta@mail.ru
+          .footer__contacts-item Адрес: г. Екатеринбург, ул. Адресная, д. 41
+          .footer__contacts-item
+            | Пн-Пт: 09:00–20:00
+            br
+            | Сб: 10:00-16:00, Вс: выходной
+
+      .footer__bottom
+        .footer__bottom-partners
+          a(href="javascript:void(0);")
+            img(data-src=`./assets/images/svg/logo-white.svg` src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
+        .footer__bottom-block  
+          a(href="javascript:void(0);") Политика конфиденциальности
+        .footer__bottom-block
+          a(href="javascript:void(0);") Пользовательское соглашение
