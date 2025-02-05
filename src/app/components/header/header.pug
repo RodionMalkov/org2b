@@ -20,6 +20,13 @@ mixin menuList(menuList)
   .container
     .header__wrapper
       .header__left
+        .header__logo
+          a(href="javascript:void(0);")
+            img(data-src=`./assets/images/svg/logo.svg` src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
+        button.header__region(type='button')
+          svg
+            use(href="#region" xlink:href="#region")
+          span Санкт-Петербург
       .header__right
         .header__nav
           button.btn.btn--accent(type='button')
@@ -28,9 +35,12 @@ mixin menuList(menuList)
             span Каталог
           +menuList(menuList)
         .header__actions
-          .header__actions-search
+          button.header__actions-search(type='button')
             svg
               use(href="#search" xlink:href="#search")
+          a.header__actions-phone(href="javascript:void(0);") 
+            svg
+              use(href="#phone" xlink:href="#phone")
           button.btn.btn--accent-alt(type='button')
             span Войти
       
