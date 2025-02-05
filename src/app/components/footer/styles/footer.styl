@@ -80,8 +80,13 @@
     font-size vw(20)
     line-height 140%
     color $white
+    transition color .3s ease-in-out
     +min-max-w(1px, $tab)
       font-size vwm(20)
+
+    &:hover
+      color $accent
+      transition color .3s ease-in-out
   
   &__contacts-item
     font-weight 400
