@@ -7,11 +7,19 @@
   border none
   cursor pointer
   text-decoration none
+  transition: background-color 0.3s ease-in-out
   +min-max-w(1px, $tab)
     gap vwm(10)
     padding vwm(16) vwm(22)
     border-radius vwm(100)
     width max-content
+
+  &:hover
+    span
+      transition color 0.3s ease-in-out
+
+    svg
+      transition fill 0.3s ease-in-out
 
   span
     font-size vw(16)
@@ -31,6 +39,15 @@
     outline 1px solid $main
     outline-offset -1px
 
+    &:hover
+      background-color $white
+      
+      span
+        color $main
+      
+      svg
+        fill $main
+
     span
       color $white
 
@@ -42,6 +59,15 @@
     outline 1px solid $main
     outline-offset -1px
 
+    &:hover
+      background-color $main
+      
+      span
+        color $white
+      
+      svg
+        fill $white
+
     span
       color $main
   
@@ -49,6 +75,15 @@
     background-color $accent
     outline 1px solid $accent
     outline-offset -1px
+
+    &:hover
+      background-color $white
+      
+      span
+        color $accent
+      
+      svg
+        fill $accent
 
     span
       color $white
@@ -58,6 +93,15 @@
     outline 1px solid $accent
     outline-offset -1px
 
+    &:hover
+      background-color $accent
+      
+      span
+        color $white
+      
+      svg
+        fill $white
+
     span
       color $accent
 
@@ -65,6 +109,15 @@
     background-color $white
     outline 1px solid $white
     outline-offset -1px
+
+    &:hover
+      background-color $accent
+      
+      span
+        color $white
+      
+      svg
+        fill $white
 
     span
       color $main
