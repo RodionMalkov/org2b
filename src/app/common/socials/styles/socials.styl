@@ -18,19 +18,20 @@
     background-color $accent
     border 1px solid $accent
     border-radius 50%
-    transition border 0.3s ease-in-out
+    transition border-color 0.3s ease-in-out, background-color 0.3s ease-in-out
     +min-max-w(1px, $tab)
       width vwm(40)
       height vwm(40)
       padding vwm(9)
   
-    // &:hover
-    //   border 1px solid $accent
-    //   transition border 0.3s ease-in-out
+    &:hover
+      background-color $white
+      border-color $white
+      transition border-color 0.3s ease-in-out, background-color 0.3s ease-in-out
       
-    //   svg
-    //     fill $accent
-    //     transition fill 0.3s ease-in-out
+      svg
+        fill $accent
+        transition fill 0.3s ease-in-out
   
   svg
     width 100%
