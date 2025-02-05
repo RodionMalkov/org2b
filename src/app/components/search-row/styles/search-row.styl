@@ -16,9 +16,44 @@
     .btn
       border-radius 0 vw(100) vw(100) 0
       margin-left vw(-1)
+      +min-w($tab + 1px)
+        position relative
+        overflow hidden
+        min-width vw(112)
+
+        &::after 
+          content ""
+          position absolute
+          top 0
+          left -100%
+          width 100%
+          height 100%
+          background linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 60%
+          )
+          transform translateX(-150%)
       +min-max-w(1px, $tab)
         border-radius 0 vwm(100) vwm(100) 0
         margin-left vwm(-1)
+
+      &:hover
+        background-color $accent
+        
+        span
+          color $white
+
+        svg
+          stroke $white
+
+        outline-color transparent
+
+        &::after
+          left 100%
+          transition transform .6s ease-out
+          transform translateX(100%)
 
       svg
         fill transparent
