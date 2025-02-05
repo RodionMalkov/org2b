@@ -1,11 +1,13 @@
 .offers-catalog
   &__wrapper
-    display grid
-    grid-template-columns vw(526) 1fr
-    grid-gap vw(56)
+    +min-w($tab + 1px)
+      display grid
+      grid-template-columns vw(526) 1fr
+      grid-gap vw(56)
     +min-max-w(1px, $tab)
-      grid-template-columns 1fr
-      grid-gap vwm(40)
+      display flex
+      flex-direction column
+      gap vwm(40)
 
   &__block-header
     margin-bottom vw(40)
