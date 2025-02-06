@@ -25,22 +25,23 @@ mixin menuList(menuList)
             img(data-src=`./assets/images/svg/logo.svg` src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
         button.header__region(type='button')
           svg
-            use(href="#region" xlink:href="#region")
+            use(href="./assets/images/svg/sprites/icon.svg#region" xlink:href="./assets/images/svg/sprites/icon.svg#region")
           span Санкт-Петербург
       .header__right
         .header__nav
-          button.btn.btn--accent(type='button')
-            .css-icon.css-icon--catalog
-              span
+          button.btn.btn--accent.header__nav-catalog-btn(type='button')
+            .header__nav-catalog-icon
+              svg
+                use(href="./assets/images/svg/sprites/icon.svg#catalog" xlink:href="./assets/images/svg/sprites/icon.svg#catalog")
             span Каталог
           +menuList(menuList)
         .header__actions
           button.header__actions-search(type='button')
             svg
-              use(href="#search" xlink:href="#search")
+              use(href="./assets/images/svg/sprites/icon.svg#search" xlink:href="./assets/images/svg/sprites/icon.svg#search")
           a.header__actions-phone(href="javascript:void(0);") 
             svg
-              use(href="#phone" xlink:href="#phone")
+              use(href="./assets/images/svg/sprites/icon.svg#phone" xlink:href="./assets/images/svg/sprites/icon.svg#phone")
           button.btn.btn--accent-alt(type='button')
             span Войти
       
