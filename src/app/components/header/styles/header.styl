@@ -94,6 +94,15 @@
     +min-max-w(1px, $tab)
       display none
 
+  &__nav-catalog-btn
+    position relative
+
+    &:hover
+      svg
+        fill $accent
+      > .header__catalog
+        display flex
+
   &__nav-catalog-icon
     svg
       object-fit contain
@@ -165,3 +174,5 @@
     svg
       cursor pointer
       fill $main
+
+@import './header.catalog.styl'

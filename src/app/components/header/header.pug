@@ -16,6 +16,55 @@ mixin menuList(menuList)
     {title: 'Платежи'},
   ];
 
+mixin menuCatalog(catalogList)
+  .header__catalog-list
+    ul
+      each item in catalogList
+        li
+          a(href="javascript:void(0);")
+            span= item.title
+            if item.children
+              svg
+                use(href="./assets/images/svg/sprites/icon.svg#arrow-right" xlink:href="./assets/images/svg/sprites/icon.svg#arrow-right")
+          if item.children
+            ul.scroll-block
+              each child in item.children
+                li
+                  a(href="javascript:void(0);")
+                    span= child.title
+
+-
+  var catalogList = [
+    {title: 'Каталог'},
+    {
+      title: 'Приложения',
+      children: [
+        {title: 'Предложения'},
+        {title: 'Электроника'},
+        {title: 'Одежда'},
+        {title: 'Обувь'},
+        {title: 'Дом и сад'},
+        {title: 'Детские товары'},
+        {title: 'Предложения'},
+        {title: 'Электроника'},
+        {title: 'Одежда'},
+        {title: 'Обувь'},
+        {title: 'Дом и сад'},
+        {title: 'Детские товары'},
+        {title: 'Предложения'},
+        {title: 'Электроника'},
+        {title: 'Одежда'},
+        {title: 'Обувь'},
+        {title: 'Дом и сад'},
+        {title: 'Детские товары'},
+      ]
+    },
+    {title: 'Спрос'},
+    {title: 'Общественные организации'},
+    {title: 'Бизнес организации'},
+  ];
+
+
 .header
   .container
     .header__wrapper
@@ -34,6 +83,10 @@ mixin menuList(menuList)
               svg
                 use(href="./assets/images/svg/sprites/icon.svg#catalog" xlink:href="./assets/images/svg/sprites/icon.svg#catalog")
             span Каталог
+            .header__catalog
+              .header__catalog-wrapper
+                +menuCatalog(catalogList)
+
           +menuList(menuList)
         .header__actions
           button.header__actions-search(type='button')

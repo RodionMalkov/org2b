@@ -1,0 +1,103 @@
+.header
+  &__catalog
+    position absolute
+    top 100%
+    left 0
+    display none
+    padding-top vw(10)
+
+  &__catalog-wrapper
+    width vw(630)
+    height vw(606)
+    border-radius vw(10)
+    background-color $white
+    box-shadow 0 0 vw(4) 0 rgba(0, 0, 0, 0.25)
+    overflow hidden
+
+  &__catalog-list
+    width 100%
+
+    ul
+      position relative
+      display flex
+      flex-direction column
+      padding 0
+      margin 0
+      width vw(315)
+      background-color #f6faff
+      height vw(606)
+
+      li
+        &:first-child
+          a
+            span
+              font-size vw(20)
+
+        &:hover
+          > a
+            background-color $secondary
+
+            span
+              color $accent
+              transition color 0.3s ease-in-out
+
+            svg
+              fill $accent
+              transition fill 0.3s ease-in-out
+          
+          ul
+            opacity 1
+            transition opacity 0.3s ease-in-out
+
+        a
+          position relative
+          display flex
+          justify-content space-between
+          align-items center
+          padding vw(14) vw(20)
+
+          span
+            font-size vw(16)
+            font-weight 600
+            color $main
+            transition color 0.3s ease-in-out
+
+          svg
+            fill $main
+            transition fill 0.3s ease-in-out
+
+      ul
+        position absolute
+        top: 0
+        left 100%
+        opacity 0
+        flex-direction column
+        padding 0
+        margin 0
+        width vw(315)
+        background-color $white
+        list-style none
+        transition opacity 0.3s ease-in-out
+
+        li
+
+          a
+            position relative
+            display flex
+            justify-content space-between
+            align-items center
+            padding vw(14) vw(20)
+
+            span
+              font-size vw(16)
+              font-weight 600
+              color $main
+              transition color 0.3s ease-in-out
+
+            svg
+              fill $main
+              transition fill 0.3s ease-in-out
+
+        .simplebar-track.simplebar-vertical
+          right vw(3)
+          margin vw(20) 0
