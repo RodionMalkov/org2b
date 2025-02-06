@@ -1,0 +1,87 @@
+.mobile-nav
+  display none
+  +min-max-w(1px, $tab)
+    display flex
+    position fixed
+    bottom  0
+    left 0
+    width 100%
+    height vwm(60)
+    z-index 50
+    padding vwm(6) vwm(18)
+    border-radius vwm(10) vwm(10) 0 0
+    background-color $main
+    box-shadow 0 vwm(-1) vwm(2) 0 rgba(0, 0, 0, 0.25)
+
+  &__list
+    width 100%
+    height vwm(48)
+
+  &__list-icon
+    display flex
+    justify-content center
+    align-items center
+    width vwm(30)
+    height vwm(30)
+
+    &.home
+      width vwm(26)
+
+    &.car
+      width vwm(26)
+
+    &.search
+      width vwm(36)
+
+    &.menu
+      width vwm(24)
+
+  ul
+    +min-max-w(1px, $tab)
+      width 100%
+      display flex
+      gap vwm(10)
+      margin 0
+      padding 0
+      list-style none
+
+    li
+      +min-max-w(1px, $tab)
+        flex 1
+        display flex
+        justify-content center
+        align-items center
+        height 100%
+
+      a, button
+        +min-max-w(1px, $tab)
+          display flex
+          flex-direction column
+          align-items center
+          gap vw(10)
+          margin 0
+          padding 0
+          border none
+          background-color transparent
+
+          &.active
+            svg
+              fill $accent
+              transition fill 0.3s ease-in-out
+
+            span
+              color $accent
+              transition color 0.3s ease-in-out
+
+      svg
+        width 100%
+        height 100%
+        object-fit contain
+        fill $white
+        transition fill 0.3s ease-in-out
+
+      span
+        +min-max-w(1px, $tab)
+          color $white
+          font-size vwm(12)
+          transition color 0.3s ease-in-out
