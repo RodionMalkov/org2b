@@ -15,10 +15,18 @@ section.std-section.offers-catalog
             button.tabs__btn(type='button' data-tab='demand') Спрос
         .tabs__wrapper
           .tabs__content(data-tab-content='offers')
-            .offers-catalog__grid
-              each catalogRepeater in [...Array(9)]
-                +CardSimple()
+            .offers-catalog__content
+              .offers-catalog__grid
+                each catalogRepeater in [...Array(9)]
+                  +CardSimple()
+              .offers-catalog__actions
+                a.btn.btn--main(href="javascript:void(0);")
+                  span Показать еще
           .tabs__content(data-tab-content='demand')
-            .offers-catalog__grid
-              each catalogRepeater in [...Array(4)]
-                +CardSimple()
+            .offers-catalog__content
+              .offers-catalog__grid
+                each catalogRepeater in [...Array(4)]
+                  +CardSimple()
+              .offers-catalog__actions
+                a.btn.btn--main(href="javascript:void(0);")
+                  span Показать еще
