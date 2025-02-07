@@ -26,6 +26,7 @@
       width vw(315)
       background-color #f6faff
       height vw(606)
+      z-index 1
 
       li
         &:first-child
@@ -47,6 +48,7 @@
           
           ul
             opacity 1
+            pointer-events all
             transition opacity 0.3s ease-in-out
 
         a
@@ -71,6 +73,7 @@
         top: 0
         left 100%
         opacity 0
+        pointer-events none
         flex-direction column
         padding 0
         margin 0
@@ -101,3 +104,20 @@
         .simplebar-track.simplebar-vertical
           right vw(3)
           margin vw(20) 0
+
+  &__catalog-bg
+    width vw(315)
+    height vw(606)
+    position absolute
+    right 0
+    top vw(10)
+    background #f6faff
+    display flex
+    justify-content center
+    align-items center
+    padding vw(30)
+
+    img
+      width 100%
+      height 100%
+      object-fit contain
