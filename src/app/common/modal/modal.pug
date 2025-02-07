@@ -1,0 +1,8 @@
+mixin Modal(modalId, type = 'right') 
+  .modal.micromodal-slide(id= modalId, class= modalId, class= `type-${type}`)
+    .modal__overflow(data-micromodal-close)
+    .modal__wrapper
+      .modal__header
+        button.modal__close(type='button' data-micromodal-close) test
+      .modal__content
+        block

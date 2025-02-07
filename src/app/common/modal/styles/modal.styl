@@ -1,0 +1,109 @@
+.modal
+  display none
+  width 100%
+  height 100vh
+  z-index 200
+  position relative
+  transition opacity 0.3s ease-in-out
+  transition opacity 1s ease, transform 1s ease
+
+  &__wrapper,
+  &__overflow
+    will-change transform
+
+  &.is-open
+    display block
+    position fixed
+    inset 0
+
+  &.type-right
+    +min-max-w(1px, $tab)
+      display none
+
+    .modal__wrapper
+      top 0
+      right 0
+      max-width vw(700)
+      transform translateX(0)
+
+  &.type-top
+    +min-max-w(1px, $tab)
+      display none
+      
+    .modal__wrapper
+      height vw(200)
+
+  &__overflow
+    position fixed
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background rgba(0, 0, 0, 0.6)
+    display flex
+    justify-content center
+    align-items center
+    transition opacity 0.3s ease-in-out
+    z-index -1
+
+  &__wrapper
+    position fixed
+    width 100%
+    height 100%
+    background-color $white
+
+.modal[aria-hidden="false"] .modal__overflow
+  animation fadeIn 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
+
+.modal[aria-hidden="true"] .modal__overflow
+  animation fadeOut 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
+
+.modal.type-right[aria-hidden="false"] .modal__wrapper
+  animation leftToRight 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
+
+.modal.type-right[aria-hidden="true"] .modal__wrapper
+  animation rightToLeft 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
+
+.modal.type-top[aria-hidden="false"] .modal__wrapper
+  animation topToBottom 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
+  
+.modal.type-top[aria-hidden="true"] .modal__wrapper
+  animation bottomToTop 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
+
+
+@keyframes fadeIn
+  from
+    opacity 0
+  to
+    opacity 1
+
+@keyframes fadeOut
+  from
+    opacity 1
+  to
+    opacity 0
+
+@keyframes leftToRight
+  from
+    transform translateX(100%)
+  to
+    transform translateX(0)
+
+@keyframes rightToLeft
+  from
+    transform translateX(0)
+  to
+    transform translateX(100%)
+
+@keyframes bottomToTop
+  from
+    transform translateY(0)
+  to
+    transform translateY(-100%)
+
+@keyframes topToBottom
+  from
+    transform translateY(-100%)
+  to
+    transform translateY(0)
+
