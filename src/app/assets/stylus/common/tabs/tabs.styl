@@ -1,0 +1,31 @@
+.tabs
+  display flex
+  align-items center
+  background-color $secondary
+  border-radius vw(100)
+  width fit-content
+  +min-max-w(1px, $tab)
+    border-radius vwm(100)
+
+  &__btn
+    font-size vw(16)
+    padding vw(9) vw(25)
+    border none
+    background-color $secondary
+    cursor pointer
+    border-radius vw(100)
+    color $dark-gray
+    +min-max-w(1px, $tab)
+      font-size vwm(14)
+      padding vwm(9) vwm(16)
+      border-radius vwm(100)
+
+    &.active
+      background-color $main
+      color $white
+
+  &__content
+    display none
+
+    &.active
+      display flex
