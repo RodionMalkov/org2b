@@ -82,7 +82,7 @@ mixin menuCatalog(catalogList)
         .header__logo
           a(href="javascript:void(0);")
             img(data-src=`./assets/images/svg/logo.svg` src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
-        button.header__region(type='button')
+        button.header__region(type='button' data-modal-open="modal-region")
           svg
             use(href="./assets/images/svg/sprites/icon.svg#region" xlink:href="./assets/images/svg/sprites/icon.svg#region")
           span Санкт-Петербург
@@ -110,4 +110,6 @@ mixin menuCatalog(catalogList)
               use(href="./assets/images/svg/sprites/icon.svg#phone" xlink:href="./assets/images/svg/sprites/icon.svg#phone")
           button.btn.btn--accent-alt(type='button')
             span Войти
-      
+
++Modal('modal-region')
+  h1 test
