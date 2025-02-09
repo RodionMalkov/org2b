@@ -17,14 +17,20 @@
     inset 0
 
   &.type-right
-    +min-max-w(1px, $tab)
-      display none
+
+    .modal__close
+      +min-w($tab + 1px)
+        margin-left auto
 
     .modal__wrapper
       top 0
       right 0
-      max-width vw(700)
+      max-width vw(662)
       transform translateX(0)
+      padding vw(40)
+      +min-max-w(1px, $tab)
+        padding vwm(30) vwm(23)
+        max-width 100%
 
   &.type-top
     +min-max-w(1px, $tab)
@@ -54,12 +60,15 @@
     background-color $white
 
   &__close
+    position relative
     width vw(16)
     height vw(16)
     border none
     padding 0
     margin 0
     background-color transparent
+    cursor pointer
+    z-index 2
     +min-max-w(1px, $tab)
       width vwm(16)
       height vwm(16)
@@ -69,6 +78,30 @@
       height 100%
       object-fit contain
       fill $main
+
+  &__header
+    display flex
+    flex-direction column
+    gap vw(20)
+    margin-bottom vw(20)
+    +min-max-w(1px, $tab)
+      gap vwm(30)
+      margin-bottom vwm(30)
+
+  &__title
+    font-weight 600
+    font-size vw(32)
+    color $main
+    +min-max-w(1px, $tab)
+      font-size vwm(24)
+
+  &__desc
+    font-weight 400
+    font-size vw(20)
+    line-height 150%
+    color $main
+    +min-max-w(1px, $tab)
+      font-size vwm(16)
 
 .modal[aria-hidden="false"] .modal__overflow
   animation fadeIn 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)

@@ -1,4 +1,4 @@
-mixin Modal(modalId, type = 'right') 
+mixin Modal(modalId, type = 'right', title, desc) 
   .modal(id= modalId, class= modalId, class= `type-${type}`)
     .modal__overflow(data-modal-close)
     .modal__wrapper
@@ -7,5 +7,9 @@ mixin Modal(modalId, type = 'right')
           button.modal__close(type='button' data-modal-close)
             svg
               use(href="./assets/images/svg/sprites/icon.svg#close" xlink:href="./assets/images/svg/sprites/icon.svg#close")
+          if title
+            .modal__title= title
+          if desc
+            .modal__desc= desc
       .modal__content
         block
