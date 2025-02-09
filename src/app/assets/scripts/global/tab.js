@@ -2,11 +2,13 @@ export default function handleTabContent(container) {
   document.addEventListener('DOMContentLoaded', () => {
     const tabsContainer = document.querySelectorAll(`.${container}`)
 
+    console.log(tabsContainer)
+
     if (!tabsContainer) return
 
     tabsContainer.forEach(tabs => {
-      const btns = tabs.querySelectorAll('.tabs__btn')
-      const contents = tabs.querySelectorAll('.tabs__content')
+      const btns = tabs.querySelectorAll('[data-tab]')
+      const contents = tabs.querySelectorAll('[data-tab-content]')
 
       if (!btns || !contents) return
 
