@@ -8,8 +8,10 @@ mixin Modal(modalId, type = 'right', title, desc)
             svg
               use(href="./assets/images/svg/sprites/icon.svg#close" xlink:href="./assets/images/svg/sprites/icon.svg#close")
           if title
-            .modal__title= title
+            .modal__title!= title
           if desc
-            .modal__desc= desc
+            .modal__desc!= desc
+      if type === 'sheet'
+        .modal__header(data-modal-close)
       .modal__content
         block

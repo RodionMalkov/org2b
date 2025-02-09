@@ -40,6 +40,46 @@
       height max-content
       min-height vw(110)
 
+  &.type-sheet 
+    +min-w($tab + 1px)
+      display none !important
+    +min-max-w(1px, $tab)
+      width 100%
+
+    .modal__wrapper
+      bottom 0
+      border-radius vw(20) vw(20) 0 0
+      padding-bottom vw(80)
+      +min-max-w(1px, $tab)
+        border-radius vwm(20) vwm(20) 0 0
+        padding-bottom vwm(80)
+
+    .modal__header
+      position relative
+      padding vw(25) vw(30)
+      +min-max-w(1px, $tab)
+        padding vwm(25) vwm(30)
+
+      &:before
+        content ''
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        width vw(104)
+        height vw(5)
+        border-radius vw(10)
+        background-color $dark-gray
+        +min-max-w(1px, $tab)
+          width vwm(104)
+          height vwm(5)
+          border-radius vwm(10)
+      
+
+    .modal__wrapper
+      width 100%
+      height max-content
+  
   &__overflow
     position fixed
     top 0
@@ -121,6 +161,12 @@
 .modal.type-top[aria-hidden="true"] .modal__wrapper
   animation bottomToTop 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
 
+.modal.type-sheet[aria-hidden="false"] .modal__wrapper
+  animation bottoSheetClose 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
+  
+.modal.type-sheet[aria-hidden="true"] .modal__wrapper
+  animation bottoSheetOpen 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995)
+
 
 @keyframes fadeIn
   from
@@ -155,5 +201,17 @@
 @keyframes topToBottom
   from
     transform translateY(-100%)
+  to
+    transform translateY(0)
+
+@keyframes bottoSheetOpen
+  from
+    transform translateY(0)
+  to
+    transform translateY(100%)
+
+@keyframes bottoSheetClose
+  from
+    transform translateY(100%)
   to
     transform translateY(0)
