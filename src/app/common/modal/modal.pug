@@ -2,7 +2,10 @@ mixin Modal(modalId, type = 'right')
   .modal(id= modalId, class= modalId, class= `type-${type}`)
     .modal__overflow(data-modal-close)
     .modal__wrapper
-      .modal__header
-        button.modal__close(type='button' data-modal-close) test
+      if type === 'right'
+        .modal__header
+          button.modal__close(type='button' data-modal-close)
+            svg
+              use(href="./assets/images/svg/sprites/icon.svg#close" xlink:href="./assets/images/svg/sprites/icon.svg#close")
       .modal__content
         block
