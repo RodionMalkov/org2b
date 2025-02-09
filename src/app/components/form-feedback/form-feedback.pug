@@ -1,0 +1,13 @@
+form.form.form-feedback
+  .form__body
+    input.form__input(type="text" placeholder="Имя" required)
+    input.form__input(type="tel" placeholder="Номер телефона" required)
+    input.form__input(type="email" placeholder="Email" required)
+    textarea.form__textarea(type="text" placeholder="Оставьте комментарий" required)
+    button.btn.btn--accent(type="submit")
+      span Оставить заявку
+    .form__policy
+      input.form__checkbox(type="checkbox" required)
+      span.form__policy-text
+        span согласие на обработку персональных данных в соответствии 
+        a(href="javascript:void(0);") с политикой конфиденциальности
