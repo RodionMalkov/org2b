@@ -1,0 +1,10 @@
++Modal('modal-search', 'top')
+  .container
+    .modal-search__wrapper
+      .modal-search__header
+        +SearchRow('true')
+        button.modal__close(type='button' data-modal-close)
+          svg
+            use(href="./assets/images/svg/sprites/icon.svg#close" xlink:href="./assets/images/svg/sprites/icon.svg#close")
+      .modal-search__body
+        include ../search-result/search-result

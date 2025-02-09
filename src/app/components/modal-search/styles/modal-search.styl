@@ -1,0 +1,31 @@
+.modal.modal-search
+
+  .modal-search__wrapper
+    display flex
+    flex-direction column
+    gap vw(10)
+    padding vw(30) 0
+    height max-content
+
+  .modal-search__header
+    display flex
+    align-items center
+    justify-content space-between
+    gap vw(20)
+
+  .search-row
+    width 100%
+
+  .search-row__label
+    border 1px solid $gray
+    border-radius vw(100)
+    +min-max-w(1px, $tab)
+      border-radius vwm(100)
+
+  .modal__close
+    svg
+      fill $dark-gray
+
+      &:hover
+        fill $main
+        transition fill 0.3s ease-in-out
