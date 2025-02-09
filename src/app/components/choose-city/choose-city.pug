@@ -1,0 +1,26 @@
+mixin chooseList(list)
+  .choose-city__list-subtitle Популярные города
+  ul
+    each city in list
+      li
+        a(href="javascript:void(0);")= city
+
+- var rusCity = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Пермь', 'Челябинск', 'Тюмень', 'Омск']
+- var kzCity = ['Алматы', 'Астана', 'Шымкент', 'Актобе', 'Караганда', 'Актау']
+
+
+
+.choose-city
+  .choose-city__wrapper
+    .choose-city__tabs
+      .btn(data-tab='region-rus')
+        span Россия
+      .btn(data-tab='region-kz')
+        span Казахстан
+    .choose-city__search
+      +SearchRow(false)
+    .choose-city__lists
+      .choose-city__list(data-tab-content='region-rus')
+        +chooseList(rusCity)
+      .choose-city__list(data-tab-content='region-kz')
+        +chooseList(kzCity)

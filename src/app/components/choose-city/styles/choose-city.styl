@@ -1,0 +1,89 @@
+.choose-city
+  &__wrapper
+    display flex
+    flex-direction column
+    gap vw(30)
+    +min-max-w(1px, $tab)
+      gap vwm(30)
+
+
+  &__tabs
+    display flex
+    align-items center
+    gap vw(12)
+
+    .btn
+      background-color $secondary
+      outline 1px solid $secondary
+      outline-offset -1px
+      transition background-color 0.3s ease-in-out, outline-color 0.3s ease-in-out
+      span
+        color $main
+        transition color 0.3s ease-in-out
+      
+      &:hover
+        outline-color $accent
+        color $accent
+        transition outline-color 0.3s ease-in-out, color 0.3s ease-in-out
+
+        span
+          color $accent
+          transition color 0.3s ease-in-out
+      
+      &.active
+        background-color $accent
+        outline-color $accent
+        transition background-color 0.3s ease-in-out, outline-color 0.3s ease-in-out
+        
+        span
+          color $white
+          transition color 0.3s ease-in-out
+
+  &__list
+    display none
+
+    &.active
+      display flex
+      flex-direction column
+      gap vw(20)
+      +min-max-w(1px, $tab)
+        gap vwm(20)
+
+    ul
+      margin 0
+      padding 0
+      list-style none
+
+      a
+        display flex
+        font-weight 400
+        font-size vw(16)
+        line-height 150%
+        color $main
+        transition color 0.3s ease-in-out
+        padding vw(7) 0
+        +min-max-w(1px, $tab)
+          font-size vwm(16)
+
+        &:hover
+          color $accent
+          transition color 0.3s ease-in-out
+
+  &__list-subtitle
+    font-weight 400
+    font-size vw(16)
+    line-height 150%
+    color $dark-gray
+    +min-max-w(1px, $tab)
+      font-size vwm(16)
+  
+  .search-row .search-row__label
+
+    .form__input
+      border-color $dark-gray
+
+    .btn
+      min-width fit-content
+
+    .btn span
+      display none
