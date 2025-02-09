@@ -16,7 +16,7 @@ mixin footerList(list)
             | Есть идея или предложение?
             br
             | Напишите нам и мы с вами свяжемся!
-          .btn.btn--accent
+          .btn.btn--accent(data-modal-open="modal-feedback")
             span Написать нам
           +Socials(['tg', 'vk', 'wa'])
 
