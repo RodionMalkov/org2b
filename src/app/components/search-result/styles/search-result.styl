@@ -1,0 +1,23 @@
+.search-result
+  ul
+    margin 0
+    padding 0
+    list-style none
+
+    a
+      display flex
+      padding vw(10) vw(20)
+      font-family $second-family
+      font-weight 400
+      font-size vw(18)
+      line-height 140%
+      color $main
+      transition background-color 0.3s ease-in-out
+      +min-max-w(1px, $tab)
+        font-size vwm(18)
+        padding vwm(10) vwm(20)
+
+      &:hover
+        background-color $secondary
+        transition background-color 0.3s ease-in-out
+
