@@ -102,7 +102,7 @@ mixin menuCatalog(catalogList)
 
           +menuList(menuList)
         .header__actions
-          button.header__actions-search(type='button')
+          button.header__actions-search(type='button' data-modal-open="modal-search")
             svg
               use(href="./assets/images/svg/sprites/icon.svg#search" xlink:href="./assets/images/svg/sprites/icon.svg#search")
           a.header__actions-phone(href="javascript:void(0);") 
@@ -110,6 +110,3 @@ mixin menuCatalog(catalogList)
               use(href="./assets/images/svg/sprites/icon.svg#phone" xlink:href="./assets/images/svg/sprites/icon.svg#phone")
           button.btn.btn--accent-alt(type='button')
             span Войти
-
-+Modal('modal-region')
-  h1 test
