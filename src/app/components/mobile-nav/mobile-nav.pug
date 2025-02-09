@@ -3,25 +3,24 @@ nav.mobile-nav
     ul
       li
         a(href="javascript:void(0);")
-          button(type="button") 
-            .mobile-nav__list-icon.home
-              svg
-                use(href="./assets/images/svg/sprites/icon.svg#home" xlink:href="./assets/images/svg/sprites/icon.svg#home")
-            span Главная
+          .mobile-nav__list-icon.home
+            svg
+              use(href="./assets/images/svg/sprites/icon.svg#home" xlink:href="./assets/images/svg/sprites/icon.svg#home")
+          span Главная
       li
-        button(type='button')
+        button(type='button' data-modal-open="sheet-catalog")
           .mobile-nav__list-icon.car
             svg
               use(href="./assets/images/svg/sprites/icon.svg#car" xlink:href="./assets/images/svg/sprites/icon.svg#car")
           span Каталог
       li
-        button(type='button')
+        button(type='button' data-modal-open="sheet-search")
           .mobile-nav__list-icon.search
             svg
               use(href="./assets/images/svg/sprites/icon.svg#search-menu" xlink:href="./assets/images/svg/sprites/icon.svg#search-menu")
           span Поиск
       li
-        button(type='button')
+        button(type='button' data-modal-open="sheet-menu")
           .mobile-nav__list-icon.menu
             svg
               use(href="./assets/images/svg/sprites/icon.svg#burger" xlink:href="./assets/images/svg/sprites/icon.svg#burger")
