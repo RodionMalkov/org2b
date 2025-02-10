@@ -1,0 +1,39 @@
+.sheet-search
+  .search-row__label
+    
+    .form__input
+      border-color $dark-gray
+      padding vw(8) vw(20)
+      font-size vw(16)
+      +min-max-w(1px, $tab)
+        font-size vwm(14)
+        padding vwm(8) vwm(20)
+
+    .btn
+      padding vw(8) vw(20)
+      +min-max-w(1px, $tab)
+        padding vwm(8) vwm(16)
+
+      span
+        display none
+
+  .nav-list
+    ul
+      li
+
+        &:first-child
+          a
+            padding-top vw(20)
+            +min-max-w(1px, $tab)
+              padding-top vwm(20)
+
+        &:last-child
+          a
+            padding-bottom vw(20)
+            +min-max-w(1px, $tab)
+              padding-bottom vwm(20)
+
+        a
+          padding vw(10) vw(15)
+          +min-max-w(1px, $tab)
+            padding vwm(10) vwm(15)

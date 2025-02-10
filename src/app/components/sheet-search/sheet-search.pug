@@ -1,2 +1,16 @@
+include ../nav-list/nav-list.pug
+include ../search-row/search-row.pug
+
+-
+  var mobileNavSearch = [
+    {title: 'Все категории'},
+    {title: 'По всему сайту'},
+    {title: 'Каталог предложений'},
+    {title: 'Каталог спроса'},
+    {title: 'Организации'},
+    {title: 'Мероприятия'},
+  ];
+
 +Modal('sheet-search', 'sheet')
-  h1 Поиск
+  +SearchRow(false)
+  +NavList(mobileNavSearch)
