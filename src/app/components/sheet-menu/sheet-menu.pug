@@ -1,2 +1,14 @@
+include ../nav-list/nav-list.pug
+
+-
+  var mobileNavMenu = [
+    {title: 'О портале'},
+    {title: 'Мероприятия'},
+    {title: 'Организации'},
+    {title: 'Услуги'},
+    {title: 'Предложения'},
+    {title: 'Платежи'},
+  ];
+
 +Modal('sheet-menu', 'sheet')
-  h1 Меню
+  +NavList(mobileNavMenu)
