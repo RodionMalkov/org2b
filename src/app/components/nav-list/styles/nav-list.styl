@@ -1,0 +1,64 @@
+.nav-list
+  ul
+    margin 0
+    padding 0
+    list-style none
+
+    li
+
+      &:first-child
+        a
+          padding-top 0
+          font-weight 600
+
+      &:last-child
+        a
+          padding-bottom 0
+
+      a
+        display flex
+        justify-content space-between
+        align-items center
+        gap vw(20)
+        font-size vw(16)
+        padding vw(8) 0
+        color $main
+        transition color 0.3s ease-in-out
+        transition font-weight 0.3s ease-in-out
+        +min-max-w(1px, $tab)
+          gap vwm(20)
+          font-size vwm(16)
+          padding vwm(8) 0
+
+        // &:hover
+        //   color $accent
+        //   transition color 0.3s ease-in-out
+
+        &.active
+          font-weight 600
+          transition font-weight 0.3s ease-in-out
+
+          svg
+            transform rotate(-90deg)
+            transition transform 0.3s ease-in-out
+
+        svg
+          width vw(13)
+          height vw(13)
+          fill $main
+          transform rotate(90deg)
+          transition transform 0.3s ease-in-out
+          +min-max-w(1px, $tab)
+            width vwm(13)
+            height vwm(13)
+
+      ul
+        display none
+
+        li
+          &:first-child
+            a
+              font-weight 400
+
+        &.active
+          display block

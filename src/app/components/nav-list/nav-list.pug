@@ -1,0 +1,16 @@
+mixin NavList(props)
+  .nav-list
+    ul
+      each item in props
+        li
+          a(href="javascript:void(0);")
+            span= item.title
+            if item.children
+              svg
+                use(href="./assets/images/svg/sprites/icon.svg#arrow-more" xlink:href="./assets/images/svg/sprites/icon.svg#arrow-more")
+          if item.children
+            ul
+              each child in item.children
+                li
+                  a(href="javascript:void(0);")
+                    span= child.title
