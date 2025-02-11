@@ -100,6 +100,16 @@
     &:hover
       svg
         fill $accent
+
+        &:nth-child(1)
+          display none
+          
+        &:nth-child(2)
+          display flex
+
+      ul
+        svg
+          fill $main
       > .header__catalog
         +min-w($tab + 1px)
           display flex
@@ -108,6 +118,9 @@
     svg
       object-fit contain
       fill $white
+
+      &:nth-child(2)
+        display none
 
   &__menu
     ul
