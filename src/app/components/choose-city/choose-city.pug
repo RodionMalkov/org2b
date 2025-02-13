@@ -5,18 +5,22 @@ mixin chooseList(list)
       li
         a(href="javascript:void(0);")= city
 
-- var rusCity = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Пермь', 'Челябинск', 'Тюмень', 'Омск']
-- var kzCity = ['Алматы', 'Астана', 'Шымкент', 'Актобе', 'Караганда', 'Актау']
-
+- var rusCity = ['Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Пермь', 'Челябинск', 'Тюмень', 'Омск'];
+- var kzCity = ['Алматы', 'Астана', 'Шымкент', 'Актобе', 'Караганда', 'Актау'];
+- var belCity = ['Минск', 'Брест', 'Гродно', 'Гомель', 'Витебск', 'Могилёв', 'Бобруйск', 'Барановичи', 'Новополоцк', 'Пинск', 'Борисов'];
 
 
 .choose-city
   .choose-city__wrapper
-    .choose-city__tabs
-      .btn(data-tab='region-rus')
-        span Россия
-      .btn(data-tab='region-kz')
-        span Казахстан
+    .choose-city__swiper.swiper
+      .choose-city__tabs.swiper-wrapper
+        .btn.swiper-slide(data-tab='region-rus')
+          span Россия
+        .btn.swiper-slide(data-tab='region-kz')
+          span Казахстан
+        .btn.swiper-slide(data-tab='region-bel')
+          span Белорусь
+      +Pagination('scrollbar')
     .choose-city__search
       +SearchRow(false)
     .choose-city__lists
@@ -24,3 +28,5 @@ mixin chooseList(list)
         +chooseList(rusCity)
       .choose-city__list(data-tab-content='region-kz')
         +chooseList(kzCity)
+      .choose-city__list(data-tab-content='region-bel')
+        +chooseList(belCity)

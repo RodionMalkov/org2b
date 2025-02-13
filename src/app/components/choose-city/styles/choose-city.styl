@@ -6,20 +6,33 @@
     +min-max-w(1px, $tab)
       gap vwm(30)
 
+  &__swiper.swiper
+    width 100%
+    +min-max-w(1px, $tab)
+      width 'calc(100% + %s)' % (vwm(24))
 
   &__tabs
     display flex
     align-items center
-    gap vw(12)
 
     .btn
+      width max-content
       background-color $secondary
       outline 1px solid $secondary
       outline-offset -1px
       transition background-color 0.3s ease-in-out, outline-color 0.3s ease-in-out
+
+      &:not(:last-child)
+        margin-right vw(14)
+        +min-max-w(1px, $tab)
+          margin-right vwm(14)
+      
       span
+        font-size vw(16)
         color $main
         transition color 0.3s ease-in-out
+        +min-max-w(1px, $tab)
+          font-size vwm(16)
       
       &:hover
         outline-color $accent
@@ -38,6 +51,12 @@
         span
           color $white
           transition color 0.3s ease-in-out
+
+  .scrollbar.swiper-scrollbar-horizontal
+    margin-top vw(18)
+    +min-max-w(1px, $tab)
+      width 'calc(100% + %s)' % (vwm(-24))
+      margin-top vwm(18)
 
   &__list
     display none
