@@ -1,0 +1,41 @@
+.modal.modal-catalog
+  +min-w($tab + 1px)
+    display none
+  +min-max-w(1px, $tab)
+    .scroll-block
+      height 'calc(100vh - %s)' % (vwm(160))
+
+      .simplebar-track.simplebar-horizontal
+        display none
+      
+      .simplebar-track.simplebar-vertical
+        right vwm(-16)
+
+    .nav-list
+      ul
+        li
+          height vwm(30)
+          transition height 0.3s ease-in-out
+          overflow hidden
+
+          &:has(a.active)
+            height 100%
+            max-height max-content
+            transition height 0.3s ease-in-out
+          
+
+            ul
+              opacity 1
+              transition opacity 0.3s ease-in-out
+              pointer-events all
+
+          ul
+            margin vwm(14) 0
+            display block
+            opacity 0
+            pointer-events none
+            transition opacity 0.3s ease-in-out
+
+            a
+              padding vwm(8) 0
+              
