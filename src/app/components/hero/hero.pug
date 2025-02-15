@@ -48,7 +48,7 @@ section.std-section.hero
             img(data-src="./assets/images/svg/icon/payment-icon.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=".." class="lazy")
       .hero__search
         +SearchRow(true)
-        button.btn.btn--main.hero__search--mobile(type='button')
+        button.btn.btn--main.hero__search--mobile(type='button' data-modal-open="sheet-search")
           svg
             use(href="./assets/images/svg/sprites/icon.svg#search" xlink:href="./assets/images/svg/sprites/icon.svg#search")
           span Поиск по порталу

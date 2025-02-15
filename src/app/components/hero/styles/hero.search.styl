@@ -14,6 +14,11 @@
         display none
 
   &__search--mobile
+    &:hover
+      svg
+        fill transparent
+        stroke $main
+
     +min-w($tab + 1px)
       display none
     +min-max-w(1px, $tab)
@@ -23,3 +28,5 @@
       svg
         fill transparent
         stroke $white
+
+    
