@@ -1,8 +1,21 @@
 export default function handlerMobileNav() {
   const mobileNav = document.querySelector('.mobile-nav')
   const navBtn = mobileNav?.querySelectorAll('button[data-modal-open]')
+  const heroSearchBtn = document.querySelector('.hero__search--mobile')
 
   if (!mobileNav || !navBtn) return
+
+  if (heroSearchBtn) {
+    heroSearchBtn.addEventListener('click', () => {
+      const searchBtn = Array.from(navBtn).find(
+        button => button.getAttribute('data-modal-open') === 'sheet-search'
+      )
+
+      if (!searchBtn.classList.contains('active')) {
+        searchBtn.classList.add('active')
+      }
+    })
+  }
 
   let activeModalId = null
 
