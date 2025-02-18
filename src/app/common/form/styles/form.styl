@@ -1,0 +1,93 @@
+.form
+  &__body
+    display flex
+    flex-direction column
+    gap vw(20)
+    +min-max-w(1px, $tab)
+      gap vwm(20)
+
+  &__item
+    width 100%
+    display flex
+    position relative
+
+    &:has(.form__input.input-error) .form__label
+      color $accent
+      transition color 0.3s ease-in-out
+
+  &__input,  &__textarea
+    width 100%
+    padding vw(14) vw(20)
+    border-radius vw(100)
+    outline 1px solid $gray
+    border none
+    +min-max-w(1px, $tab)
+      padding vwm(14) vwm(20)
+      border-radius vwm(100)
+
+    &:focus, &:active, &:focus-visible
+      outline-color $main
+
+    &.input-error
+      outline-color $accent
+
+  &__label
+    position absolute
+    pointer-events none
+    top 50%
+    left vw(20)
+    transform translateY(-50%)
+    white-space nowrap
+    overflow hidden
+    font-weight 400
+    font-size vw(16)
+    color $gray
+    transition color 0.3s ease-in-out, top 0.3s ease-in-out, font-size 0.3s ease-in-out, transform 0.3s ease-in-out, padding 0.3s ease-in-out
+    +min-max-w(1px, $tab)
+      left vwm(20)
+      font-size vwm(16)
+
+  &__input:focus:not(:disabled) + &__label, &__textarea:focus:not(:disabled) + &__label,
+  &__input:active:not(:disabled) + &__label, &__textarea:active:not(:disabled) + &__label,
+  &__input:valid:not(:placeholder-shown):not(:disabled) + label:not(&__label),
+  &__textarea:valid:not(:placeholder-shown):not(:disabled) + label:not(&__label),
+  &__input:invalid:not(:placeholder-shown):not(:disabled) + label:not(&__label),
+  &__textarea:invalid:not(:placeholder-shown):not(:disabled) + label:not(&__label),
+  &__input:not(:placeholder-shown):not(:disabled) + &__label,
+  &__textarea:not(:placeholder-shown):not(:disabled) + &__label,
+  &__input:hover + &__label, &__textarea:hover + &__label
+    top vw(6)
+    font-size vw(14)
+    transform translateY(vw(-12))
+    background-color $white
+    padding 0 vw(4)
+    transition top 0.3s ease-in-out, font-size 0.3s ease-in-out, transform 0.3s ease-in-out, padding 0.3s ease-in-out
+    +min-max-w(1px, $tab)
+      top vwm(6)
+      font-size vwm(14)
+      transform: translateY(vwm(-12))
+      padding 0 vwm(4)
+
+  &__textarea
+    border-radius vw(10)
+    +min-max-w(1px, $tab)
+      border-radius vwm(10)
+
+  &__checkbox
+    flex 0 0 auto
+    width vw(24)
+    height vw(24)
+    accent-color $accent
+    +min-max-w(1px, $tab)
+      width vwm(24)
+      height vwm(24)
+
+  &__policy
+    display flex
+    gap vw(16)
+    +min-max-w(1px, $tab)
+      gap vwm(16)
+
+  a
+    color $accent
+    text-decoration underline
