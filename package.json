@@ -55,12 +55,14 @@
     "@fancyapps/ui": "^5.0.36",
     "animate.css": "^4.1.1",
     "imagesloaded": "^5.0.0",
+    "inputmask": "^5.0.9",
     "lightbox2": "^2.11.5",
     "masonry-layout": "^4.2.2",
     "micromodal": "^0.4.10",
     "normalize.css": "^8.0.1",
     "simplebar": "^6.3.0",
     "swiper": "^11.1.14",
+    "validator": "^13.12.0",
     "vanilla-lazyload": "^19.1.3"
   }
 }
